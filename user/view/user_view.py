@@ -10,6 +10,7 @@ def add_user():
     
     name = request.json.get("name", None)
     email = request.json.get("email", None)
+    role = request.json.get("role", None)
     
     if name is None or email is None:
         return jsonify(message="Invalid Request"),500

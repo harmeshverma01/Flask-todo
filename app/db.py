@@ -1,10 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
-import app
+from app.__init__ import create_app
 
 def create_db():
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    db = SQLAlchemy(app)
+    create_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
+    create_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    db = SQLAlchemy(create_app)
     return db
-
 

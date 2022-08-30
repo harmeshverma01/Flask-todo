@@ -1,4 +1,3 @@
-from app.db import 
 import app
 from app.db import create_db
 from app import db
